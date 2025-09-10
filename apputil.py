@@ -69,5 +69,6 @@ def sort_names(names, scores):
     sorted_names = names[score_sort_index]
 
     #creating 2d array with name and corresponding score
-    return list(zip(sorted_names.tolist(), sorted_scores.tolist()))
+    result = np.array(list(zip(sorted_names, sorted_scores)))
+    return result
 
