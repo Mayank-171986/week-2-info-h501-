@@ -33,6 +33,8 @@ Returns:
 
 """
 def lowest_score(names, scores):
+    names = np.array(names)
+    scores = np.array(scores)
     #reveal the index of the lowest score via np.argmin() 
     lowest_result_index = np.unravel_index(np.argmin(scores), scores.shape)
 
@@ -53,6 +55,10 @@ Returns:
 
 """
 def sort_names(names, scores):
+
+    names = np.array(names)
+    scores = np.array(scores)
+    
     #Sort the indices in desending order of scores
     score_sort_index = np.argsort(scores)[::-1]
 
