@@ -58,7 +58,7 @@ def sort_names(names, scores):
 
     names = np.array(names)
     scores = np.array(scores)
-    
+
     #Sort the indices in desending order of scores
     score_sort_index = np.argsort(scores)[::-1]
 
@@ -69,6 +69,5 @@ def sort_names(names, scores):
     sorted_names = names[score_sort_index]
 
     #creating 2d array with name and corresponding score
-    result = np.array(list(zip(sorted_names, sorted_scores))) 
-    return result
+    return list(zip(sorted_names.tolist(), sorted_scores.tolist()))
 
